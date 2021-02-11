@@ -10,12 +10,10 @@ const buttons = document.querySelectorAll("button");
       window.dataLayer = window.dataLayer || [];
       
       dataLayer.push({
-        event: this,
-        product: this.getAttribute("data-product"),
-        value: this.getAttribute("data-price")
+        event: "Checkout",
+        product: button.getAttribute("data-product"),
       });
 
-      console.log(document.getElementById("pizza"))
       console.log(this.getAttribute("data-product"))
 
       window.location =

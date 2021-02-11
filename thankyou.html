@@ -35,6 +35,14 @@
       console.log(product, price);
 
       //Lägg in och fyll datalagret vid färdig transaktion
+            
+      window.dataLayer = window.dataLayer || [];
+      
+      dataLayer.push({
+        event: "TransactionSuccess",
+        product: product,
+        productPrice: price
+      });
     </script>
   </body>
 </html>
