@@ -6,6 +6,18 @@ const buttons = document.querySelectorAll("button");
     function () {
       //Lägg in och fyll datalagret vid checkout
 
+      
+      window.dataLayer = window.dataLayer || [];
+      
+      dataLayer.push({
+        event: this,
+        product: this.getAttribute("data-product"),
+        value: this.getAttribute("data-price")
+      });
+
+      console.log(document.getElementById("pizza"))
+      console.log(this.getAttribute("data-product"))
+
       window.location =
         "thankyou.html?product=" +
         button.getAttribute("data-product") +
